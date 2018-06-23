@@ -1,6 +1,6 @@
 # Early Riser Theme
 
-![Preview](images/preview.png)
+![Preview](https://cdn.rawgit.com/mikemcbride/early-riser-syntax/d342a217/images/preview.png)
 
 # Installation
 
