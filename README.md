@@ -4,9 +4,9 @@
 
 # Installation
 
-0.  Install [Atom](https://atom.io/)
-1.  Launch Atom
-2.  Open **Preferences** > **Install**
-3.  Search for `early-riser-syntax`
-4.  Click **Install** to install it
-5.  Preferences > Themes > Syntax Theme > **Early Riser**
+1.  Install [Atom](https://atom.io/)
+2.  Launch Atom
+3.  Open **Preferences** > **Install**
+4.  Search for `early-riser-syntax`
+5.  Click **Install** to install it
+6.  Preferences > Themes > Syntax Theme > **Early Riser**
