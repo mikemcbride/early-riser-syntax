@@ -9,7 +9,7 @@
     "theme",
     "light"
   ],
-  "repository": "https://github.com/atom/early-riser-syntax",
+  "repository": "https://github.com/mikemcbride/early-riser-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
