@@ -1,0 +1,330 @@
+// Language syntax highlighting
+.syntax--comment {
+  color: @mono-3;
+  font-style: italic;
+
+  // make sure links are not colored inside of comments
+  .syntax--markup.syntax--link {
+    color: @mono-3;
+  }
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--type {
+    color: @yellow;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    color: @green;
+  }
+}
+
+.syntax--keyword {
+  color: @purple;
+
+  &.syntax--control {
+    color: @purple;
+  }
+
+  &.syntax--operator {
+    color: @mono-1;
+
+    &.syntax--assignment {
+      color: @cyan;
+    }
+  }
+
+  &.syntax--other.syntax--special-method {
+    color: @blue;
+  }
+
+  &.syntax--other.syntax--unit {
+    color: @orange;
+  }
+}
+
+.syntax--storage {
+  color: @purple;
+
+  &.syntax--type {
+    &.syntax--annotation,
+    &.syntax--primitive {
+      color: @purple;
+    }
+  }
+
+  &.syntax--modifier {
+    &.syntax--package,
+    &.syntax--import {
+      color: @mono-1;
+    }
+  }
+}
+
+.syntax--constant {
+  color: @orange;
+
+  &.syntax--boolean {
+    color: @red;
+  }
+
+  &.syntax--variable {
+    color: @orange;
+  }
+
+  &.syntax--character.syntax--escape {
+    color: @cyan;
+  }
+
+  &.syntax--numeric {
+    color: @orange;
+  }
+
+  &.syntax--other.syntax--color {
+    color: @cyan;
+  }
+
+  &.syntax--other.syntax--symbol {
+    color: @cyan;
+  }
+}
+
+.syntax--variable {
+  color: @syntax-color-variable;
+
+  &.syntax--interpolation {
+    color: @red;
+  }
+
+  &.syntax--parameter {
+    color: @mono-1;
+  }
+}
+
+.syntax--string {
+  color: @green;
+
+  &.syntax--regexp {
+    color: @cyan;
+
+    .syntax--source.syntax--ruby.syntax--embedded {
+      color: @yellow;
+    }
+  }
+
+  &.syntax--other.syntax--link {
+    color: @red;
+  }
+}
+
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
+      color: @mono-3;
+    }
+
+    &.syntax--method-parameters,
+    &.syntax--function-parameters,
+    &.syntax--parameters,
+    &.syntax--separator,
+    &.syntax--seperator,
+    &.syntax--array {
+      color: @mono-1;
+    }
+
+    &.syntax--heading,
+    &.syntax--identity {
+      color: @blue;
+    }
+
+    &.syntax--bold {
+      color: @yellow;
+      font-weight: bold;
+    }
+
+    &.syntax--italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.syntax--section {
+    &.syntax--embedded {
+      color: @red;
+    }
+
+    &.syntax--method,
+    &.syntax--class,
+    &.syntax--inner-class {
+      color: @mono-1;
+    }
+  }
+
+  &.syntax--terminator {
+    color: @mono-2;
+  }
+}
+
+.syntax--support {
+  &.syntax--class {
+    color: @yellow;
+  }
+
+  &.syntax--type {
+    color: @cyan;
+
+    // for some strange reason, the CSS selector for property names in `css.less`
+    // is not getting applied, even with the proper selectors.
+    // The setup is the exact same (AFAIK) as one-dark-syntax, which works as expected.
+    // Adding the extra CSS selectors here fixes the issue, but I don't love the solution.
+    // ¯\_(ツ)_/¯
+    &.syntax--css {
+      &.syntax--property-name,
+      &.syntax--property-value {
+        color: @mono-1;
+      }
+    }
+  }
+
+  &.syntax--function {
+    color: @cyan;
+
+    &.syntax--any-method {
+      color: @blue;
+    }
+  }
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--function {
+    color: @blue;
+  }
+
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
+    color: @yellow;
+  }
+
+  &.syntax--name.syntax--section {
+    color: @blue;
+  }
+
+  &.syntax--name.syntax--tag {
+    color: @red;
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @orange;
+
+    &.syntax--id {
+      color: @blue;
+    }
+  }
+}
+
+.syntax--meta {
+  &.syntax--class {
+    color: @yellow;
+
+    &.syntax--body,
+    &.syntax--html {
+      color: @mono-1;
+    }
+  }
+
+  &.syntax--method-call,
+  &.syntax--method {
+    color: @mono-1;
+  }
+
+  &.syntax--definition {
+    &.syntax--variable {
+      color: @red;
+    }
+  }
+
+  &.syntax--link {
+    color: @orange;
+  }
+
+  &.syntax--require {
+    color: @blue;
+  }
+
+  &.syntax--selector {
+    color: @purple;
+  }
+
+  &.syntax--separator {
+    color: @mono-1;
+  }
+
+  &.syntax--tag {
+    color: @mono-1;
+  }
+}
+
+.syntax--underline {
+  text-decoration: underline;
+}
+
+.syntax--none {
+  color: @mono-1;
+}
+
+.syntax--invalid {
+  &.syntax--deprecated {
+    color: @syntax-deprecated-fg !important;
+    background-color: @syntax-deprecated-bg !important;
+  }
+  &.syntax--illegal {
+    color: @syntax-illegal-fg !important;
+    background-color: @syntax-illegal-bg !important;
+  }
+}
+
+// Languages -------------------------------------------------
+
+.syntax--markup {
+  &.syntax--bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.syntax--changed {
+    color: @purple;
+  }
+
+  &.syntax--deleted {
+    color: @red;
+  }
+
+  &.syntax--italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.syntax--heading {
+    color: @red;
+
+    .syntax--punctuation.syntax--definition.syntax--heading {
+      color: @blue;
+    }
+  }
+
+  &.syntax--link {
+    color: @cyan;
+  }
+
+  &.syntax--inserted {
+    color: @green;
+  }
+
+  &.syntax--quote {
+    color: @orange;
+  }
+
+  &.syntax--raw {
+    color: @green;
+  }
+}

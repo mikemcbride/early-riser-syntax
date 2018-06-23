@@ -1,0 +1,17 @@
+{
+  "name": "early-riser-syntax",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "author": "mikemcbride",
+  "description": "A short description of your syntax theme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "light"
+  ],
+  "repository": "https://github.com/atom/early-riser-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
