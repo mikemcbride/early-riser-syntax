@@ -1,5 +1,7 @@
 # Early Riser Theme
 
+A light syntax theme for the Atom editor.
+
 ![Preview](https://cdn.rawgit.com/mikemcbride/early-riser-syntax/d342a217/images/preview.png)
 
 # Installation
