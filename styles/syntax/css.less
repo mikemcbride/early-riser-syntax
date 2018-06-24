@@ -1,8 +1,9 @@
-.syntax--source.syntax--css {
+.syntax--source.syntax--css,
+.syntax--source.syntax--postcss {
   // highlight properties/values if they are supported
   .syntax--property-name,
   .syntax--property-value {
-    color: @mono-2;
+    color: @syntax-color-property;
 
     &.syntax--support {
       color: @cyan;

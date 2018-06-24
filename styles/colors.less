@@ -2,22 +2,23 @@
 @syntax-hue: 210;
 
 // Monochrome -----------------------------------
-@mono-1:	#778a9c;
-@mono-2:	#7992b4;
-@mono-3:	#a0aebf;
+@mono-1:	hsl(@syntax-hue, 14%, 40%);
+@mono-2:	hsl(@syntax-hue, 14%, 60%);
+@mono-3:	hsl(@syntax-hue, 14%, 70%);
+@mono-4:  hsl(@syntax-hue, 15%, 98%);
 
 // Colors -----------------------------------
 @cyan: #14d0bd;
 @blue: #2b87ff;
-@purple: #ae2ed7;
-@green: #00b149;
+@purple: #aa00ff;
+@green: #00c753;
 @red: #f1372e;
-@orange: #ff8a40;
-@yellow: #fbb010;
+@orange: #ff9029;
+@yellow: #ffa90a;
 
 // Base colors -----------------------------------
 @syntax-fg:     @mono-1;
-@syntax-bg:     hsl(@syntax-hue, 2%, 98%);
+@syntax-bg:     @mono-4;
 @syntax-gutter: @syntax-fg;
 @syntax-guide:  fade(@syntax-fg, 15%);
 @syntax-accent: @blue;

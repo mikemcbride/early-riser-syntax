@@ -1,11 +1,11 @@
 // Language syntax highlighting
 .syntax--comment {
-  color: @mono-3;
+  color: @syntax-color-comment;
   font-style: italic;
 
   // make sure links are not colored inside of comments
   .syntax--markup.syntax--link {
-    color: @mono-3;
+    color: @syntax-color-comment;
   }
 }
 
@@ -20,10 +20,10 @@
 }
 
 .syntax--keyword {
-  color: @purple;
+  color: @syntax-color-keyword;
 
   &.syntax--control {
-    color: @purple;
+    color: @syntax-color-keyword;
   }
 
   &.syntax--operator {
@@ -62,14 +62,14 @@
 }
 
 .syntax--constant {
-  color: @orange;
+  color: @syntax-color-constant;
 
   &.syntax--boolean {
     color: @red;
   }
 
   &.syntax--variable {
-    color: @orange;
+    color: @syntax-color-variable;
   }
 
   &.syntax--character.syntax--escape {
@@ -80,10 +80,7 @@
     color: @orange;
   }
 
-  &.syntax--other.syntax--color {
-    color: @cyan;
-  }
-
+  &.syntax--other.syntax--color,
   &.syntax--other.syntax--symbol {
     color: @cyan;
   }
@@ -102,7 +99,7 @@
 }
 
 .syntax--string {
-  color: @green;
+  color: @syntax-color-string;
 
   &.syntax--regexp {
     color: @cyan;
@@ -118,18 +115,20 @@
 }
 
 .syntax--punctuation {
+  &.syntax--property-list,
+  &.syntax--method-parameters,
+  &.syntax--function,
+  &.syntax--function-parameters,
+  &.syntax--parameters,
+  &.syntax--separator,
+  &.syntax--seperator,
+  &.syntax--array {
+    color: @syntax-color-punctuation;
+  }
+  
   &.syntax--definition {
     &.syntax--comment {
       color: @mono-3;
-    }
-
-    &.syntax--method-parameters,
-    &.syntax--function-parameters,
-    &.syntax--parameters,
-    &.syntax--separator,
-    &.syntax--seperator,
-    &.syntax--array {
-      color: @mono-1;
     }
 
     &.syntax--heading,
@@ -167,27 +166,15 @@
 
 .syntax--support {
   &.syntax--class {
-    color: @yellow;
+    color: @syntax-color-class;
   }
 
   &.syntax--type {
     color: @cyan;
-
-    // for some strange reason, the CSS selector for property names in `css.less`
-    // is not getting applied, even with the proper selectors.
-    // The setup is the exact same (AFAIK) as one-dark-syntax, which works as expected.
-    // Adding the extra CSS selectors here fixes the issue, but I don't love the solution.
-    // ¯\_(ツ)_/¯
-    &.syntax--css {
-      &.syntax--property-name,
-      &.syntax--property-value {
-        color: @mono-1;
-      }
-    }
   }
 
   &.syntax--function {
-    color: @cyan;
+    color: @syntax-color-function;
 
     &.syntax--any-method {
       color: @blue;
@@ -197,12 +184,12 @@
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @blue;
+    color: @syntax-color-function;
   }
 
   &.syntax--name.syntax--class,
   &.syntax--name.syntax--type.syntax--class {
-    color: @yellow;
+    color: @syntax-color-class;
   }
 
   &.syntax--name.syntax--section {
@@ -210,36 +197,40 @@
   }
 
   &.syntax--name.syntax--tag {
-    color: @red;
+    color: @syntax-color-tag;
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @orange;
+    color: @syntax-color-attribute;
 
     &.syntax--id {
-      color: @blue;
+      color: @red;
     }
   }
 }
 
 .syntax--meta {
+  &.syntax--attribute-selector {
+    color: @mono-2;
+  }
+  
   &.syntax--class {
-    color: @yellow;
+    color: @syntax-color-class;
 
     &.syntax--body,
     &.syntax--html {
-      color: @mono-1;
+      color: @syntax-fg;
     }
   }
 
   &.syntax--method-call,
   &.syntax--method {
-    color: @mono-1;
+    color: @syntax-fg;
   }
 
   &.syntax--definition {
     &.syntax--variable {
-      color: @red;
+      color: @syntax-color-variable;
     }
   }
 
@@ -256,11 +247,11 @@
   }
 
   &.syntax--separator {
-    color: @mono-1;
+    color: @syntax-color-punctuation;
   }
 
   &.syntax--tag {
-    color: @mono-1;
+    color: @mono-2;
   }
 }
 
