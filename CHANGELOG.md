@@ -1,3 +1,7 @@
+## 1.0.7
+
+* targets more missing punctuation on HTML tags
+
 ## 1.0.6
 
 * adds missing punctuation target
