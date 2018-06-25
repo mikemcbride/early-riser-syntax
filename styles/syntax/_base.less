@@ -171,6 +171,13 @@
 
   &.syntax--type {
     color: @cyan;
+    
+    &.syntax--css {
+      &.syntax--property-name,
+      &.syntax--property-value {
+        color: @mono-2;
+      }
+    }
   }
 
   &.syntax--function {
