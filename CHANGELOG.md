@@ -1,3 +1,7 @@
+## 1.0.6
+
+* adds missing punctuation target
+
 ## 1.0.5
 
 * adjusts purple, selected background, current line foreground in gutter
