@@ -1,3 +1,7 @@
+## 1.0.3
+
+* update purple
+
 ## 1.0.2
 
 * adjust css property name color
