@@ -28,10 +28,6 @@
 
   &.syntax--operator {
     color: @mono-2;
-
-    &.syntax--assignment {
-      color: @cyan;
-    }
   }
 
   &.syntax--other.syntax--special-method {
@@ -217,6 +213,10 @@
 }
 
 .syntax--meta {
+  &.syntax--delimiter {
+    color: @mono-2;
+  }
+  
   &.syntax--attribute-selector {
     color: @mono-2;
   }
