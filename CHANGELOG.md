@@ -1,3 +1,9 @@
+## 1.0.5
+
+* adjusts purple, selected background, current line foreground in gutter
+* removes cyan as assignment operator
+* adds styles for delimiters and nested curly braces
+
 ## 1.0.4
 
 * tone down keyword operator color
