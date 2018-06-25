@@ -1,3 +1,7 @@
+## 1.0.8
+
+* remove antialiasing on gutter line numbers. It helps with light font on a dark background, but not the other way around.
+
 ## 1.0.7
 
 * targets more missing punctuation on HTML tags
