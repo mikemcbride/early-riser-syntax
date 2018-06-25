@@ -1,3 +1,7 @@
+## 1.0.2
+
+* adjust css property name color
+
 ## 1.0.1
 
 * minor tweaks to colors
