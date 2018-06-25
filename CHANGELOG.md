@@ -1,3 +1,7 @@
+## 1.0.4
+
+* tone down keyword operator color
+
 ## 1.0.3
 
 * update purple
