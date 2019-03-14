@@ -5,7 +5,12 @@
 </template>
 
 <script>
+import UserProfile from '@/components/UserProfile'
+
 export default {
+  components: {
+    UserProfile,
+  },
   props: {
     aborted: {
       type: Boolean,
@@ -36,7 +41,7 @@ button {
 }
 
 button.disabled {
-  background: #ccc;
+  background: #c0c0c0;
   cursor: none;
 }
 </style>
