@@ -2,7 +2,7 @@
 
 A light syntax theme for the Atom editor.
 
-![Preview](https://cdn.jsdelivr.net/gh/mikemcbride/early-riser-syntax/images/preview.png)
+![Preview](https://cdn.jsdelivr.net/gh/mikemcbride/early-riser-syntax@5cf4a9198a638416374df1f82f4ffcb6a2e5f762/images/preview.png)
 
 # Installation
 
